@@ -5,15 +5,12 @@ from django.http import HttpResponse
 
 
 def Home(request):
-    text = """<h1>Welcome to this home page!</h1>"""
-    return HttpResponse(text)
+    return render(request, 'home.html')
 
 
 def News(request):
-    text = """<h1>Welcome to my News page!</h1>"""
-    return HttpResponse(text)
+    return render(request, 'news.html')
 
 
 def Contact(request):
-    text = """<h1>Welcome to my Contact page!</h1>"""
-    return HttpResponse(text)
+    return render(request, 'contact.html')

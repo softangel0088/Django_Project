@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import News
 from .forms import RegistrationForm
 from .models import RegistrationData
@@ -42,5 +43,7 @@ def addUser(request):
                                       email=form.cleaned_data['email'],
                                       phone=form.cleaned_data['phone'])
         myregister.save()
+        messages.add_message(request, messages.SUCCESS,
+                             "You have signup successfully!")
 
-    return redirect('home')
+    return redirect('signup')

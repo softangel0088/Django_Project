@@ -22,3 +22,7 @@ def NewsP(request):
 
 def Contact(request):
     return render(request, 'contact.html')
+
+
+def SignUp(request):
+    return render(request, 'signup.html')

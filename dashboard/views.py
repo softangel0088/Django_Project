@@ -20,7 +20,7 @@ def NewsP(request):
     context = {
         "data": obj
     }
-    return render(request, 'news.html', context)
+    return render(request, 'news-1.html', context)
 
 
 def Contact(request):
